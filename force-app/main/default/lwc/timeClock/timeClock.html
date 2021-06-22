@@ -1,0 +1,52 @@
+<template>
+    <lightning-layout class="container slds-align_absolute-center slds-text-align_center" multiple-rows >
+        
+        <lightning-layout-item size="12">
+            <div class="time">{time}</div>
+        </lightning-layout-item>
+
+        <lightning-layout-item size="12" class="greet">
+            <div class="greet">{greeting}</div>
+        </lightning-layout-item>
+
+        <lightning-layout-item size="12" large-device-size="6" medium-device-size="10" small-device-size="12" class="slds-m-top_large">
+            <lightning-layout multiple-rows>
+                
+                <lightning-layout-item size="8" class="timedisplay">
+                    Time Logged: {myTime}
+                </lightning-layout-item>
+                <lightning-layout-item size="8" class="timedisplay">
+                    Start Time: {startTimeDisplay}
+                </lightning-layout-item>
+                <lightning-layout-item size="8" class="timedisplay"> 
+                    End Time: {endTimeDisplay}
+                </lightning-layout-item>
+
+                <!-- <lightning-layout-item size="1">
+                    <lightning-button-icon icon-name="utility:add" title="Add Time" onclick={addTime} class="buttonadd">
+                    </lightning-button-icon>
+                </lightning-layout-item> -->
+            
+            </lightning-layout>
+        </lightning-layout-item>
+
+        <template if:false={timeStart}>
+            <lightning-button variant="brand-outline" label="Start Time" title="Start Time" onclick={handleClick} class="slds-m-left_x-small"></lightning-button>
+        </template>
+        <template if:true={timeStart}>
+            <lightning-button variant="brand-outline" label="End Time" title="End Time" onclick={handleClick} class="slds-m-left_x-small"></lightning-button>
+        </template>
+
+         <lightning-button variant="brand" label="Check Logs" title="Primary action" onclick={handleClickLogCheck} class="slds-m-left_x-small"></lightning-button>
+
+       <!-- <lightning-layout-item size="12" class="slds-m-top_large log"> -->
+            <lightning-layout class="log" multiple-rows>
+               <template for:each={logs} for:item="log">
+                   Recent punch: {log} <br key={log}>
+               </template>   
+            </lightning-layout> 
+       <!-- </lightning-layout-item> -->
+
+
+    </lightning-layout>
+</template>

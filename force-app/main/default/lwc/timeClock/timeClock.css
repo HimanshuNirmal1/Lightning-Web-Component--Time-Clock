@@ -1,0 +1,33 @@
+.container{
+    background-color: beige;
+    padding: 16px;
+    max-height: 520px;
+    display:block;
+}
+
+.time{
+    font-size: 4rem;
+    font-weight: 300;
+}
+
+.greeting{
+    font-size: 2rem;
+    font-weight: 200;
+}
+
+.timedisplay{
+    font-size:20px;
+    padding: 10px;
+}
+
+.greet{
+    font-size:17px;
+    font-style:italic;
+
+}
+
+.log{
+    padding: 10px;
+    font-size: 20px;
+    align-items: center;
+}
