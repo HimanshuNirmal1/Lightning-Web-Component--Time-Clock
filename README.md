@@ -1,7 +1,7 @@
 # Salesforce DX Project: Time Clock
 - Time clock recieves and stores the employee start time, end time and also shows the recent punch with the 'Check Logs' button.
 - Clicking the 'Start Time' button records the current start time and the 'End Time' records the current time which is then dsiplayed as the end time.
-
+![LWC Time Clock Output](https://user-images.githubusercontent.com/45479710/122954764-5b4c8600-d39d-11eb-8301-0c0271da83ef.PNG)
 ## Read All About It
 
 - [Salesforce Extensions Documentation](https://developer.salesforce.com/tools/vscode/)
